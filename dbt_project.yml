@@ -1,9 +1,14 @@
-name: 'jira'
+name: 'dbt_fivetran_transformation'
 version: '0.17.0'
 config-version: 2
 require-dbt-version: [">=1.3.0", "<2.0.0"]
+profile: dbt_fivetran_transformation
 vars:
-
+  jira_database: LANDING
+  jira_schema: jira
+  workday_database: LANDING
+  workday_schema: workday_hcm
+  employee_history_enabled: true
   jira:
     issue: "{{ ref('stg_jira__issue') }}"
     project: "{{ ref('stg_jira__project') }}"
@@ -29,4 +34,4 @@ models:
     +schema: jira
     intermediate:
       +materialized: ephemeral
-      +schema: int_jira
+      +schema: jira
