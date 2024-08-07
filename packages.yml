@@ -1,6 +1,6 @@
 packages:
-- package: fivetran/jira_source
-  version: [">=0.7.0", "<0.8.0"]
+- package: fivetran/jira
+  version: 0.17.0
 
 - package: fivetran/fivetran_utils
   version: [">=0.4.0", "<0.5.0"]
