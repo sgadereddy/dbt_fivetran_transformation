@@ -31,7 +31,7 @@ vars:
 models:
   jira:
     +materialized: table
-    #+schema: jira
+    +schema: jira
     intermediate:
       +materialized: ephemeral
-      #schema: int_jira
+      schema:
