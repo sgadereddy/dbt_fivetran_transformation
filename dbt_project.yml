@@ -34,4 +34,4 @@ models:
     +schema: jira
     intermediate:
       +materialized: ephemeral
-      schema:
+      schema: int_jira
